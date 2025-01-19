@@ -48,7 +48,7 @@ const register = async(req,res)=>{
         await user.save()
         
 
-        // sendVerifyEmail(user.email,otp,timeleft)
+        sendVerifyEmail(user.email,otp,timeleft)
 
         return res.status(200).json({success:true,message:"User Registered Successfully"})
 
