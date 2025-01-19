@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+/* Make the scrollbar thinner and customize its colors */
+@layer base {
+    /* Apply to all elements */
+    * {
+      scrollbar-color: rgb(88, 88, 88) transparent !important; /* Thumb color and track color */
+      scrollbar-width: thin !important; /* Make the scrollbar thinner */
+    }
+  
+    /* For WebKit-based browsers like Chrome, Safari, and Edge */
+    ::-webkit-scrollbar {
+      width: 4px; /* Set the width of the scrollbar (you can set this to 2px if needed) */
+    }
+  
+    ::-webkit-scrollbar-track {
+      background: transparent; /* Track color (make it transparent) */
+    }
+  
+    ::-webkit-scrollbar-thumb {
+      background-color: rgb(88, 88, 88); /* Thumb color */
+      border-radius: 2px; /* Rounded corners for the thumb */
+    }
+  
+    ::-webkit-scrollbar-thumb:hover {
+      background-color: rgb(60, 60, 60); /* Thumb color on hover */
+    }
+  }
+  
